@@ -12,7 +12,7 @@
       color: #fff;
     }
     .navbar-dark-mode {
-      background-color: #212121;
+      background-color: #212121 !important;
     }
     .btn-dark-toggle {
       border: 1px solid white;
@@ -23,23 +23,44 @@
       padding: 1rem;
       text-align: center;
     }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    .dropdown-menu-dark {
+      background-color: #343a40;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Abhinay</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand" href="#">Nellutla Abhinay</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#education" id="educationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Education & Experience
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="educationDropdown">
+            <li><a class="dropdown-item" href="#education">Education</a></li>
+            <li><a class="dropdown-item" href="#experience">Experience</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#projects" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Projects & Skills
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="projectsDropdown">
+            <li><a class="dropdown-item" href="#projects">Projects</a></li>
+            <li><a class="dropdown-item" href="#skills">Skills</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
@@ -48,7 +69,7 @@
   </div>
 </nav>
 
-<div class="container py-5">
+<div class="container py-5 mt-5">
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I’m a passionate BE student in AI & Data Science, with hands-on internship experience in AIML and Web Development. Skilled in Java, Python, and full-stack technologies, I'm driven to learn, grow, and contribute meaningfully.</p>
@@ -126,3 +147,4 @@
 </script>
 </body>
 </html>
+
