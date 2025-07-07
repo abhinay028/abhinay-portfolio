@@ -4,150 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nellutla Abhinay | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
+    body.dark-mode {
+      background-color: #121212;
+      color: #fff;
     }
-    header {
-      background-color: #0d47a1;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+    .navbar-dark-mode {
+      background-color: #212121;
     }
-    nav {
-      background-color: #1565c0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #0d47a1;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #0d47a1;
-    }
-    .project, .experience, .education, .cert {
-      margin-bottom: 1.5rem;
+    .btn-dark-toggle {
+      border: 1px solid white;
     }
     footer {
-      text-align: center;
-      padding: 1rem;
       background-color: #0d47a1;
       color: white;
+      padding: 1rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Nellutla Abhinay</h1>
-  <p>AI & Data Science  | Aspiring Software Developer</p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Abhinay</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn btn-outline-light btn-dark-toggle" onclick="toggleDarkMode()">Toggle Theme</button>
+    </div>
+  </div>
 </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I'm a passionate student pursuing a BE in Artificial Intelligence and Data Science. With hands-on experience in AI/ML and Web Development internships, I bring a solid foundation in Java, Python, and full-stack development.
-  </p>
-</section>
+<div class="container py-5">
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a passionate BE student in AI & Data Science, with hands-on internship experience in AIML and Web Development. Skilled in Java, Python, and full-stack technologies, I'm driven to learn, grow, and contribute meaningfully.</p>
+  </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="education">
-    <strong>BE, Methodist College of Engineering and Technology</strong><br />
-    2022 – 2025, Telangana
-  </div>
-  <div class="education">
-    <strong>Diploma, TRR College of Technology</strong><br />
-    2019 – 2022, Telangana
-  </div>
-  <div class="education">
-    <strong>SSC, Government Boys High School</strong><br />
-    2018 – 2019, Hyderabad
-  </div>
-</section>
+  <section id="education" class="mt-5" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul>
+      <li>BE, Methodist College of Engineering and Technology (2022 – 2025)</li>
+      <li>Diploma, TRR College of Technology (2019 – 2022)</li>
+      <li>SSC, Government Boys High School (2018 – 2019)</li>
+    </ul>
+  </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="experience">
-    <strong>Web Development Intern, Codsoft</strong> (Jun 2024 – Jul 2024)<br />
-    Worked with HTML, CSS, JavaScript, and Bootstrap to build responsive websites and mini-projects.
-  </div>
-  <div class="experience">
-    <strong>AIML Intern, Eduskills Foundation</strong> (Apr 2024 – Jun 2024)<br />
-    Built models using Python, Scikit-learn, TensorFlow. Worked on disease prediction and image classification.
-  </div>
-</section>
+  <section id="experience" class="mt-5" data-aos="fade-up">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Codsoft Web Development Intern</strong> (Jun–Jul 2024): Frontend & backend using HTML, CSS, JS, Bootstrap.</li>
+      <li><strong>Eduskills AIML Intern</strong> (Apr–Jun 2024): ML projects using Python, Scikit-learn, TensorFlow.</li>
+    </ul>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <strong>Lung Cancer Prediction Model</strong><br />
-    ML project using Random Forest and SVM for early detection.
-  </div>
-  <div class="project">
-    <strong>Meditation App (Java)</strong><br />
-    Android Studio app with guided timers and soothing audio.
-  </div>
-  <div class="project">
-    <strong>Skin Cancer Detection with Transfer Learning</strong><br />
-    Used ResNet and dermoscopic images for accurate predictions.
-  </div>
-</section>
+  <section id="projects" class="mt-5" data-aos="fade-up">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Lung Cancer Prediction Model</strong>: Used SVM, RF for accurate diagnosis.</li>
+      <li><strong>Meditation App</strong>: Android Studio app with Java and timer features.</li>
+      <li><strong>Skin Cancer Detection</strong>: ResNet-based transfer learning on ISIC dataset.</li>
+    </ul>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> Java, JavaScript, Node.js</li>
-    <li><strong>Frontend:</strong> HTML, CSS, React.js, Bootstrap</li>
-    <li><strong>Backend:</strong> Node.js, Express.js</li>
-    <li><strong>Java Technologies:</strong> JDBC, Collections, Exception Handling</li>
-  </ul>
-</section>
+  <section id="skills" class="mt-5" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Java, JavaScript, Node.js</li>
+      <li><strong>Frontend:</strong> HTML, CSS, React.js, Bootstrap</li>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Java Tech:</strong> JDBC, Collections, Exception Handling</li>
+    </ul>
+  </section>
 
-<section id="certifications">
-  <h2>Certifications</h2>
-  <div class="cert">Python Training – Yaaltech Solutions</div>
-  <div class="cert">IoT Basics – Cisco</div>
-  <div class="cert">CCNAv7 – Cisco Networking Academy</div>
-  <div class="cert">Data Science Virtual Experience – BCGX</div>
-  <div class="cert">Data Analytics – QUANTIUM</div>
-</section>
+  <section id="certifications" class="mt-5" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Python Training – Yaaltech Solutions</li>
+      <li>Intro to IoT – Cisco</li>
+      <li>CCNAv7 Networking – Cisco</li>
+      <li>Data Science (BCGX) – Forage</li>
+      <li>Data Analytics (Quantium) – Forage</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:abhinaynellutla@gmail.com">abhinaynellutla@gmail.com</a></p>
-  <p>Phone: <a href="tel:+918179640124">+91 8179640124</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/abhinay-nellutla-3bb910316" target="_blank">linkedin.com/in/abhinay-nellutla</a></p>
-</section>
+  <section id="contact" class="mt-5" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:abhinaynellutla@gmail.com">abhinaynellutla@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918179640124">+91 81796 40124</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/abhinay-nellutla-3bb910316" target="_blank">abhinay-nellutla</a></p>
+    <a href="resume.pdf" download class="btn btn-primary mt-2">Download Resume</a>
+  </section>
+</div>
 
 <footer>
   &copy; 2025 Nellutla Abhinay. All rights reserved.
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('nav').classList.toggle('navbar-dark-mode');
+  }
+</script>
 </body>
 </html>
